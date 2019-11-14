@@ -1,7 +1,7 @@
 {
-  "name": "vue-editor-js",
+  "name": "@neosapience/vue-editor-js",
   "license": "MIT",
-  "author": "ChangJoo Park<pcjpcj2@gmail.com>",
+  "author": "Jongsung Lee<jongsung@neosapience.com>",
   "keywords": [
     "editor",
     "editorjs",
@@ -10,12 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/changjoo-park/vue-editor-js.git"
+    "url": "https://github.com/neosapience/vue-editor-js"
   },
   "bugs": {
-    "url": "https://github.com/changjoo-park/vue-editor-js/issues"
+    "url": "https://github.com/neosapience/vue-editor-js/issues"
   },
-  "version": "0.4.0",
+  "version": "0.4.0-neosapience",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
