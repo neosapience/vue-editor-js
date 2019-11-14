@@ -102,7 +102,7 @@ export default {
     },
     getTools () {
       const pluginKeys = Object.keys(PLUGINS)
-      const isFullyFeatured = pluginKeys.every(p => !this[p])
+      const isFullyFeatured = pluginKeys.every(p => this[p] === false)
       const tools = {
         ...this.customTools
       }
@@ -125,7 +125,6 @@ export default {
 
         if (typeof props === 'object') {
           const options = Object.assign({}, this.$props[key])
-          delete options['class'] // Prevent merge wrong `class`
           tools[key] = Object.assign(tools[key], options)
         }
       })
