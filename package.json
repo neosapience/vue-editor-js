@@ -23,7 +23,7 @@
     "demo": "vue-cli-service demo",
     "start": "vue-cli-service serve"
   },
-  "main": "dist/vue-editor-js.common.js",
+  "main": "src/index.js",
   "module": "dist/vue-editor-js.esm.js",
   "unpkg": "dist/vue-editor-js.umd.min.js",
   "files": [
