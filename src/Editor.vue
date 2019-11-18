@@ -108,17 +108,8 @@ export default {
     },
     getTools () {
       const pluginKeys = Object.keys(PLUGINS)
-      const isFullyFeatured = pluginKeys.every(p => this[p] === false)
       const tools = {
         ...this.customTools
-      }
-
-      /**
-       * When plugin props are empty, enable all plugins
-       */
-      if (isFullyFeatured) {
-        pluginKeys.forEach(key => tools[key] = { class: PLUGINS[key] })
-        return tools
       }
 
       pluginKeys.forEach(key => {
