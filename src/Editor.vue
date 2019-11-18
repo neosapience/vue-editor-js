@@ -50,6 +50,11 @@ export default {
       default: () => {},
       required: false
     },
+    initialBlock: {
+      type: String,
+      default: () => null,
+      required: false
+    },
     customTools: {
       type: Object,
       default: () => {},
@@ -93,7 +98,8 @@ export default {
         onReady: () => { this.$emit('ready') },
         onChange: () => { this.$emit('change') },
         data: this.initData,
-        tools: this.getTools()
+        tools: this.getTools(),
+        ...(this.initialBlock && {initialBlock: this.initialBlock})
       })
     },
     async save () {
