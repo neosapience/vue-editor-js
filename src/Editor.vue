@@ -55,6 +55,11 @@ export default {
       default: () => null,
       required: false
     },
+    placeholder: {
+      type: String,
+      default: () => null,
+      required: false
+    },
     customTools: {
       type: Object,
       default: () => {},
@@ -99,6 +104,7 @@ export default {
         onChange: () => { this.$emit('change') },
         data: this.initData,
         tools: this.getTools(),
+        ...(this.placeholder && {placeholder: this.placeholder}),
         ...(this.initialBlock && {initialBlock: this.initialBlock})
       })
     },
@@ -122,6 +128,7 @@ export default {
 
         if (typeof props === 'object') {
           const options = Object.assign({}, this.$props[key])
+          delete options['class'] // Prevent merge wrong `class`
           tools[key] = Object.assign(tools[key], options)
         }
       })
